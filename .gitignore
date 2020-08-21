@@ -1,5 +1,5 @@
 /.idea/
 /venv/
 db.sqlite3
-/webformyself/static/bootstrap
+/static/bootstrap
 /webformyself/webformyself/static/bootstrap
