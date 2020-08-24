@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'debug_toolbar',
+
     #MYAPPS
     'news.apps.NewsConfig',
 
@@ -51,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'webformyself.urls'
@@ -81,6 +86,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'NAME': 'webformyself',
+        # 'USER': 'postgres',
+        # 'PASSWORD': '',
+        # 'HOST': 'localhost',
+        # 'PORT': '5432',
     }
 }
 
@@ -129,3 +140,6 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+
+INTERNAL_IPS = ['127.0.0.1']
