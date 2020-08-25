@@ -1,5 +1,5 @@
 from django import template
-from django.db.models import Count
+from django.db.models import Count, F
 
 from news.models import Category
 
@@ -12,5 +12,5 @@ def get_categories():
 @register.inclusion_tag('news/list_categories.html')
 def show_categories():
     # categories = Category.objects.all()
-    categories = Category.objects.annotate(cnt=Count('news')).filter(cnt__gt=0) # если в рубрике нет новостей, то она не выводится в списке рубрик
+    categories = Category.objects.annotate(cnt=Count('news', filter=F('news__is_published'))).filter(cnt__gt=0) # если в рубрике нет новостей, то она не выводится в списке рубрик
     return {'categories': categories}

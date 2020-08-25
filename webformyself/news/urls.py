@@ -2,6 +2,7 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
+    path('test/', test),
     # path('', index, name='home'),
     path('', HomeNews.as_view(), name='home'), #при добавлении ListView во views.py
     # path('category/<int:category_id>/', get_category, name='category'),
