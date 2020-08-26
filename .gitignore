@@ -2,5 +2,7 @@
 /venv/
 db.sqlite3
 static/bootstrap
+/static/bootstrap
+/webformyself/static/bootstrap
 webformyself/static/bootstrap
 /webformyself/webformyself/static/bootstrap
