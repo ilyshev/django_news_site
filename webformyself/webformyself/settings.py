@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
     'debug_toolbar',
+    'ckeditor',
+    'ckeditor_uploader',
 
     #MYAPPS
     'news.apps.NewsConfig',
@@ -146,7 +148,9 @@ INTERNAL_IPS = ['127.0.0.1']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'd.ilyshev@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = '' # email user
+EMAIL_HOST_PASSWORD = '' # email pwd
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
