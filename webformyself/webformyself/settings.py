@@ -36,9 +36,11 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'captcha',
+    'mptt',
 
     #MYAPPS
     'news.apps.NewsConfig',
+    'testapp.apps.TestappConfig',
 
     #DEFAULT APPS
     'django.contrib.admin',
